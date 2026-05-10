@@ -37,16 +37,12 @@ public class CryptoService {
         return data;
     }
 
-    /**
-     * Retorna el historial de precios recolectados.
-     */
+    
     public List<CryptoData> getPriceHistory() {
         return new ArrayList<>(priceHistory);
     }
 
-    /**
-     * Lógica de negocio: Calcula si el precio es mayor a un umbral.
-     */
+    
     public boolean isPriceAbove(double threshold) {
         CryptoData lastData = (priceHistory.isEmpty()) ? null : priceHistory.get(0);
         if (lastData != null) {
