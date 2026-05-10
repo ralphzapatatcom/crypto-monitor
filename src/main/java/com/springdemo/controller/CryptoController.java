@@ -18,10 +18,7 @@ public class CryptoController {
         this.cryptoClient = cryptoClient;
     }
 
-    /**
-     * Endpoint para obtener el precio actual "bajo demanda".
-     * URL: http://localhost:8080/api/v1/crypto/now
-     */
+    
     @GetMapping("/now")
     public ResponseEntity<CryptoData> getCurrentPrice() {
         CryptoData data = cryptoClient.fetchMarketData();
