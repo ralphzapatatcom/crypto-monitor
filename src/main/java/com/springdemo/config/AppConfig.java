@@ -18,10 +18,5 @@ public class AppConfig {
         return new RestTemplate();
     }
 
-    /*
-       Aquí podrías agregar más configuraciones en el futuro, como:
-       - Configuración de CORS si vas a conectar un Frontend.
-       - Beans de seguridad si decides proteger la API.
-       - Configuración de WebSockets para actualizaciones en tiempo real.
-    */
+    
 }
