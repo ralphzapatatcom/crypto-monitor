@@ -16,15 +16,12 @@ public class CryptoScheduler {
     private static final Logger log = LoggerFactory.getLogger(CryptoScheduler.class);
     private final CryptoClient cryptoClient;
 
-    // Inyección del cliente que creamos anteriormente
+    // Inyección del cliente que creamos antes
     public CryptoScheduler(CryptoClient cryptoClient) {
         this.cryptoClient = cryptoClient;
     }
 
-    /**
-     * Ejecuta la tarea de monitoreo cada 5 segundos (5000ms).
-     * El 'fixedRate' asegura que el intervalo comience desde el inicio de la tarea anterior.
-     */
+    
     @Scheduled(fixedRate = 5000)
     public void monitorCryptoPrice() {
         CryptoData data = cryptoClient.fetchMarketData();
