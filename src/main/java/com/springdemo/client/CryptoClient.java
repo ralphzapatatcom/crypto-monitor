@@ -10,7 +10,7 @@ public class CryptoClient {
 
     private final RestTemplate restTemplate;
 
-    // Podrías configurar esta URL en tu application.properties
+    
     @Value("${crypto.api.url:https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT}")
     private String apiUrl;
 
