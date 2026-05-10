@@ -9,10 +9,6 @@ import org.springframework.web.client.RestTemplate;
 @EnableScheduling // Permite que funcionen las tareas programadas en el paquete 'scheduler'
 public class AppConfig {
 
-    /**
-     * Definimos RestTemplate como un Bean para que Spring lo pueda
-     * inyectar automáticamente en nuestro CryptoClient.
-     */
     @Bean
     public RestTemplate restTemplate() {
         return new RestTemplate();
