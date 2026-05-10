@@ -13,7 +13,7 @@ public class CryptoService {
 
     private final CryptoClient cryptoClient;
 
-    // Lista en memoria para guardar el historial reciente (ej. últimos 10 precios)
+    
     private final List<CryptoData> priceHistory = Collections.synchronizedList(new ArrayList<>());
     private static final int MAX_HISTORY_SIZE = 10;
 
@@ -21,9 +21,7 @@ public class CryptoService {
         this.cryptoClient = cryptoClient;
     }
 
-    /**
-     * Lógica para obtener el último precio, procesarlo y guardarlo en el historial.
-     */
+    
     public CryptoData processCurrentPrice() {
         CryptoData data = cryptoClient.fetchMarketData();
 
