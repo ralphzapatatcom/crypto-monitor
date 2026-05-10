@@ -3,10 +3,7 @@ package com.springdemo.domain;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-/**
- * Esta clase representa el modelo de datos de la criptomoneda.
- * Usamos @JsonIgnoreProperties por si la API envía más datos de los que necesitamos.
- */
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CryptoData {
 
@@ -18,10 +15,10 @@ public class CryptoData {
     @JsonProperty("price")
     private String price;
 
-    // Marca de tiempo de la captura (opcional, útil para el monitoreo)
+    // Marca de tiempo de la capturaa (opcional, útil para el montoreo)
     private long timestamp;
 
-    // Constructor vacío requerido por Jackson (para convertir de JSON a Objeto)
+    //  (para convertr de JSON a Objeto)
     public CryptoData() {
         this.timestamp = System.currentTimeMillis();
     }
