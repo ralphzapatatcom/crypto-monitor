@@ -30,9 +30,7 @@ public class CryptoController {
         }
     }
 
-    /**
-     * Endpoint de prueba para verificar que el monitor está en línea.
-     */
+    
     @GetMapping("/status")
     public ResponseEntity<String> getStatus() {
         return ResponseEntity.ok("Crypto Monitor is running and healthy.");
